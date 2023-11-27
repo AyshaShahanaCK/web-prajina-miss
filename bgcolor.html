@@ -1,0 +1,20 @@
+<html>
+
+<body>
+<button type="button" onclick="myFun()">click me</button>
+
+<script> 
+var place=0;
+
+function myFun(){
+var colorList=["red","blue","green","pink"];
+document.body.style.backgroundColor = colorList[place];
+place++;
+if (place ===colorList.length) place=0;
+
+}
+
+</script>
+
+</body>
+</html>

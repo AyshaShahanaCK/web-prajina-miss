@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+.box{
+border:1px solid #000;
+width:50%;
+padding:20px;
+margin:auto;
+backgroun-color:#efefef;
+}
+.head{
+text-align:center;
+}
+#form1{
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+input{
+margin:10px;
+padding:5px;
+width:90%;
+margin-bottom:
+}
+#submit{
+width=40%;
+background-color:#198bec;
+border:1px solid #198bec;
+border-radius:100px;
+color:#fff;
+}
+#submit:hover{
+background-color:#efefef;
+color:#198bec;
+}
+</style>
+<div class="box">
+<h2 class="head">FORM</h2>
+<form id="form1" name="form1" onsubmit="validation()">
+<label>NAME</label>
+<input type="text" name="name1" placeholder="Enter the name">
+<label>EMAIL</label>
+<input type="email" name="email" placeholder="Enter the email">
+<label>Password</label>
+<input type="Password" name="password" placeholder="Enter the password">
+<label>MOBILE</label>
+<input type="number" name="mobile" placeholder="Enter the mobile number">
+<input id="submit" type="submit" name="submit" value="SUBMIT">
+
+<form>
+</div>
+<script>
+function validation(){
+var name=document.form1.name1.value;
+var pass=document.form1.password.value;
+var mob=document.form1.mobile.value;
+if(name===null||name===""){
+alert("Enter a valid name:")
+}
+if(pass.length<=7)
+{
+alert("enter a valid password")
+}
+if(mob===null||mob.length<10){
+alert("Enter a valid mobile number")
+}
+}
+</script>
+</body>
+</html>
