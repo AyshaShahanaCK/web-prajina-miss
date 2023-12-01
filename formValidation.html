@@ -36,7 +36,7 @@ color:#198bec;
 </style>
 <div class="box">
 <h2 class="head">FORM</h2>
-<form id="form1" name="form1" onsubmit="validation()">
+<form id="form1" name="form1" onsubmit="return validation()">
 <label>NAME</label>
 <input type="text" name="name1" placeholder="Enter the name">
 <label>EMAIL</label>
@@ -47,7 +47,8 @@ color:#198bec;
 <input type="number" name="mobile" placeholder="Enter the mobile number">
 <input id="submit" type="submit" name="submit" value="SUBMIT">
 
-<form>
+  
+</form>
 </div>
 <script>
 function validation(){
@@ -56,13 +57,16 @@ var pass=document.form1.password.value;
 var mob=document.form1.mobile.value;
 if(name===null||name===""){
 alert("Enter a valid name:")
+return false;
 }
 if(pass.length<=7)
 {
 alert("enter a valid password")
+return false;
 }
 if(mob===null||mob.length<10){
 alert("Enter a valid mobile number")
+return false;
 }
 }
 </script>
