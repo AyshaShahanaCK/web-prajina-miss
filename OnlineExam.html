@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>User Registration</title>
+            <style>
+                .box {
+                    width: 70%;
+                    margin: 50px auto;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    text-align: center;
+                    display:block;
+                }
+                #logform{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                .queform{
+                    align-items: left;
+                }
+                input{
+                    padding:5px 10px;
+                    margin: 10px;
+                    text-align: center;
+                }
+                .section{
+                    display:none ;
+                    text-align: left;
+                }
+            </style>
+        </head>
+<body>
+
+
+    <div class="box" id="header">
+        <h1>Candidate Login</h1>
+        <form name="logform" id="logform">
+            <label>Reg:no</label>
+            <input type="number" name="regno" placeholder="Enter the registrater no">
+
+            <label>Password</label>
+            <input type="password" name="pass" placeholder="Enter the password">
+
+        </form>
+        <button onclick="examVal()">SUBMIT</button>
+    </div>
+    
+    <div class="box section" id="section">
+        <h1>Questions </h1>
+        <form name="queform" id="queform">
+        <label>1.who is the prime Minister of India"?</label>
+        <br>
+        <input type="radio" name="1" id="">Droupathi Murmu
+        <input type="radio" name="1" id="">Rahul Gandhi
+        <input type="radio" name="1" id="">Narendra Modi
+        <input type="radio" name="1" id="">Ramnath Kovind
+       <br>
+        <label>2. How many colours are there in VIBGYOR?</label>
+        <br>
+        <input type="radio" name="2" id="">5 
+        <input type="radio" name="2" id="">6 
+        <input type="radio" name="2" id="">7 
+        <input type="radio" name="2" id="">8 
+       <br>
+        <label>3. How many hours are there in a day?</label>
+        <br>
+        <input type="radio" name="3" id="">12 hours
+        <input type="radio" name="3" id="">14 hours
+        <input type="radio" name="3" id="">22 hours
+        <input type="radio" name="3" id="">24 hours
+       <br>
+        <label>4.how many planets are there in the solar system?</label>
+        <br>
+        <input type="radio" name="4" id=""> 5
+        <input type="radio" name="4" id=""> 6
+        <input type="radio" name="4" id=""> 7
+        <input type="radio" name="4" id=""> 8
+       <br>
+        <label>5.Who is the CEO of Apple.inc?</label>
+        <br>
+        <input type="radio" name="5" id="">Tim Cook
+        <input type="radio" name="5" id="">Sunder Pichai
+        <input type="radio" name="5" id="">Mark Zukerberg
+        <input type="radio" name="5" id="">Elon Musk
+       <br>
+        </form>
+        <button onclick="login()">SUBMIT</button>
+    </div>
+
+<script>
+       
+        function examVal() {
+            var regno = document.logform.regno.value;
+     var pass = document.logform.pass.value;
+     console.log(regno);
+     console.log(pass);
+            
+
+     
+            document.getElementById('header').style.display="none"
+            document.getElementById('section').style.display = 'block';
+
+        }
+
+        
+        function login() {
+            var regno = document.logform.regno.value;
+     var pass = document.logform.pass.value;
+     console.log(regno);
+     console.log(pass);
+            alert("registrater  "+regno+" Congratulation You have successfully finished Your Exam")
+            document.getElementById('header').style.display="block"
+            document.getElementById('section').style.display = 'none';
+
+        }
+    </script>
+</body>
+</html>
